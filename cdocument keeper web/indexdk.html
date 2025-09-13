@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Keeper - Secure Document Management</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Document Keeper</h1>
+            
+            <div class="auth-container">
+                <div class="auth-form">
+                    <h3>Login</h3>
+                    <form action="index.html" method="post">
+                        <div class="form-group">
+                            <label for="mobile-no">Mobile No:</label>
+                            <input type="text" id="mobile-no" name="mobile_no" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+
+                        <div class="forgot-password">
+                            <a href="index.html">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit">Login</button>
+                        
+                        <p style="text-align: center; margin-top: 15px; color: #718096;">
+                            Create account or Sign up <strong>Click</strong>
+                        </p>
+                    </form>
+                </div>
+
+                <div class="auth-form">
+                    <h3>Sign Up</h3>
+                    <form action="signup.html" method="post">
+                        <div class="form-group">
+                            <label for="full-name">Full Name:</label>
+                            <input type="text" id="full-name" name="full_name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobile-no-signup">Mobile No:</label>
+                            <input type="text" id="mobile-no-signup" name="mobile_no" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-signup">Password:</label>
+                            <input type="password" id="password-signup" name="password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input type="password" id="confirm-password" name="confirm_password" required>
+                        </div>
+
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="intro-section">
+                <h1>Document Keeper</h1>
+                <p>Your secure solution for managing and storing important documents.</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <h3>Bills</h3>
+                    <p>Manage and view all your bills in one place. Upload new bills, categorize them, and set reminders for due dates.</p>
+                    <button type="button">View Bills</button>
+                </div>
+
+                <div class="category-card">
+                    <h3>Certificates</h3>
+                    <p>Store and organize your important certificates securely. Easily access them whenever needed.</p>
+                    <button type="button">View Certificates</button>
+                </div>
+
+                <div class="category-card">
+                    <h3>Photos</h3>
+                    <p>Keep your important photos safe and organized. Upload, view, and manage your photo documents with ease.</p>
+                    <button type="button">View Photos</button>
+                </div>
+
+                <div class="category-card">
+                    <h3>Warranties</h3>
+                    <p>Track and manage your product warranties. Upload warranty documents and set reminders for expiration dates.</p>
+                    <button type="button">View Warranties</button>
+                </div>
+
+                <div class="category-card">
+                    <h3>Insurance</h3>
+                    <p>Store and manage your insurance documents securely. Access your insurance policies and related documents anytime.</p>
+                    <button type="button">View Insurance</button>
+                </div>
+
+                <div class="category-card">
+                    <h3>Others</h3>
+                    <p>Upload and manage any other important documents that don't fit into the predefined categories.</p>
+                    <button type="button">View Others</button>
+                </div>
+            </div>
+
+            <div class="upload-section">
+                <h2>Upload Document</h2>
+                <form class="upload-form" action="upload.html" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="document-title">Document Title:</label>
+                        <input type="text" id="document-title" name="document_title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="document-category">Category:</label>
+                        <select id="document-category" name="document_category" required>
+                            <option value="">Select Category</option>
+                            <option value="bills">Bills</option>
+                            <option value="certificates">Certificates</option>
+                            <option value="photos">Photos</option>
+                            <option value="warranties">Warranties</option>
+                            <option value="insurance">Insurance</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+
+                    <label>Choose Source:</label>
+                    <div class="file-input-group">
+                        <label for="camera-input" class="file-input-label">
+                            <strong>📷 Camera</strong><br>
+                            Take a photo
+                            <input type="file" id="camera-input" accept="image/*" capture="environment" name="document_file_camera">
+                        </label>
+
+                        <label for="file-input" class="file-input-label">
+                            <strong>📁 File Upload</strong><br>
+                            Choose from device
+                            <input type="file" id="file-input" accept=".pdf,.doc,.docx,.jpg,.png" name="document_file_gallery">
+                        </label>
+                    </div>
+
+                    <button type="submit">Upload Document</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Document Keeper. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
